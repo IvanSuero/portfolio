@@ -1,0 +1,42 @@
+---
+import EducationItem from "./EducationItem.astro";
+
+const EDUCATION = [
+{
+    date: "2023",
+    title: "Exchange Program",
+    school: "Cornell University - New York",
+    description: [
+      "Business Management exchange program in an Ivy League University.",
+      "Courses in Finance, Consulting, Marketing and Labor Relations.",
+    ],
+  },
+  {
+    date: "2019-2024",
+    title: "Business Management",
+    school: "Universitat Rovira i Virgili",
+    description:[
+      "Specialization in Finance.",
+      "MAPFRE challenge finalist.",
+    ],
+  },
+  {
+    date: "2019-2024",
+    title: "Development of Web and Mobile Applications",
+    school: "Universitat Rovira i Virgili",
+    description: [
+      "Specialization in Full Stack Development and Data Analytics.",
+      "Technologies: HTML, CSS, JavaScript, React, Node.js, MongoDB, SQL.",
+    ],
+  }
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EDUCATION.map((education) => (
+      <li class="">
+        <EducationItem {...education} />
+      </li>
+    ))
+  }
